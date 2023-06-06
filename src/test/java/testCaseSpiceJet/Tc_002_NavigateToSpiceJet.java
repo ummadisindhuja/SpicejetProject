@@ -33,7 +33,7 @@ public class Tc_002_NavigateToSpiceJet extends BaseSpiceJet{
 		} else {
 			reportStep("Validating SpiceJet Page Title - Fail", "Fail", testName);
 		}
-		
+		//naviagte page
 	}
 
 }

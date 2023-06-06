@@ -23,5 +23,6 @@ public class Tc_008_BookingSuccesful extends BaseSpiceJet{
 		bp.fillDetailsforBooking("ummadi", "sindhuja", "8522098804", "ummadimails.ummadisindhuja@gmail.co",
 				"India", "kadapa");
 		bp.paymentInfo("607392011972", "UMMADI SINDHUJA", "04", "26", "035");
+		
 }
 }
