@@ -44,20 +44,38 @@ public class Bookingpage extends BaseSpiceJet {
 	@FindBy(xpath="(//div[text()='Continue'])[3]")
 	WebElement clickContinueInAddOns;
 	
-	@FindBy(xpath="//input[@id='card_number']")
+	@FindBy(xpath="//iframe[@class='card_number_iframe']")
+	WebElement iFrameCardNumber;
+	
+	@FindBy(xpath="//input[@class='card_number']")
 	WebElement fillCardNumber;
 	
-	@FindBy(xpath="//input[@id='name_on_card']")
+	@FindBy(xpath="//iframe[@class='name_on_card_iframe']")
+	WebElement iframecardHolderName;
+	
+	@FindBy(xpath="//input[@class='name_on_card']")
 	WebElement cardHolderName;
 	
-	@FindBy(xpath="//input[@id='card_exp_month']")
+	@FindBy(xpath="//iframe[@class='card_exp_month_iframe']")
+	WebElement iFramecardexpirymonth;
+	
+	@FindBy(xpath="//input[@class='card_exp_month']")
 	WebElement cardexpirymonth;
 	
-	@FindBy(xpath="//input[@id='card_exp_year']")
+	@FindBy(xpath="//iframe[@class='card_exp_year_iframe']")
+	WebElement iFramecardExpiryYear;
+	
+	@FindBy(xpath="//input[@class='card_exp_year']")
 	WebElement cardExpiryYear;
 	
-	@FindBy(xpath="//input[@id='security_code']")
+	@FindBy(xpath="//iframe[@class='security_code_iframe']")
+	WebElement iFramecvvNumber;
+	
+	@FindBy(xpath="//input[@class='security_code']")
 	WebElement cvvNumber;
+	
+	@FindBy(xpath="//div[@data-testid='paymentTnC']")
+	WebElement checkBoxTermsAndConditions;
 	
 	@FindBy(xpath="//div[@data-testid='common-proceed-to-pay']")
 	WebElement proceedToPayButton;
@@ -82,9 +100,8 @@ public class Bookingpage extends BaseSpiceJet {
 			String mobileNumber,String emailAddress,String country,
 			String city) {
 		clickOn(continueToPay);
-		//selectFromDropDown(selectIntittleDropDown,"Mrs");
-		clickOn(clickDropDown);
-		clickOn(selectDropDown);
+		selectFromDropDown(clickDropDown,"Mrs");
+		
 		type(firstNameAndMiddleName,firstName);
 		type(lastName,lastname);
 		type(fillMobileNumber,mobileNumber);
@@ -95,13 +112,25 @@ public class Bookingpage extends BaseSpiceJet {
 		clickOn(clickContinue);
 		clickOn(clickContinueInAddOns);
 	}
+	
 	public void paymentInfo(String cardNumber, String cardHoldername, String expMonth, 
 			String expiryyear, String cvvNmber){
+		driver.switchTo().frame(iFrameCardNumber);
 		type(fillCardNumber,cardNumber);
+		switchingTodefault();
+		driver.switchTo().frame(iframecardHolderName);
 		type(cardHolderName,cardHoldername);
+		switchingTodefault();
+		driver.switchTo().frame(iFramecardexpirymonth);
 		type(cardexpirymonth,expMonth);
+		switchingTodefault();
+		driver.switchTo().frame(iFramecardExpiryYear);
 		type(cardExpiryYear,expiryyear);
+		switchingTodefault();
+		driver.switchTo().frame(iFramecvvNumber);
 		type(cvvNumber,cvvNmber);
+		switchingTodefault();
+		clickOn(checkBoxTermsAndConditions);
 		clickOn(proceedToPayButton);
 		}
 	

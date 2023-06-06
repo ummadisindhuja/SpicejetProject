@@ -22,7 +22,7 @@ public class SignInPage extends BaseSpiceJet{
 	@FindBy(xpath="//input[@data-testid='password-input-box-cta']")
 	WebElement fillPassword;
 	
-	@FindBy(xpath="//div[contains(text(),'LOGIN')]")
+	@FindBy(xpath="//div[@data-testid='login-cta']")
 	WebElement logInButton;
 	
 	@FindBy(xpath="//div[text()='Email']")
@@ -39,7 +39,7 @@ public class SignInPage extends BaseSpiceJet{
 		type(this.fillEmail,fillEmail);
 		type(this.fillPassword,fillPassword);
 		clickOn(logInButton);
-		dismissAlert();
+		
 	}
 	public void signInWithMobileNumber(String FillMobileNumber,String fillPassword) {
 		clickOn(MobileNumberradioButton);
@@ -48,7 +48,7 @@ public class SignInPage extends BaseSpiceJet{
 		type(this.FillMobileNumber,FillMobileNumber);
 		type(this.fillPassword,fillPassword);
 		clickOn(logInButton);
-		dismissAlert();
+		
 	}
 	
 	

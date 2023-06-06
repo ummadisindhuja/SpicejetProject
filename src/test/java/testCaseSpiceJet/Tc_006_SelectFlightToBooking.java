@@ -1,5 +1,6 @@
 package testCaseSpiceJet;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -17,6 +18,8 @@ public class Tc_006_SelectFlightToBooking extends BaseSpiceJet{
 @Test
 public void ticketBooking() {
 	HomePage hp = new HomePage();
-	hp.flightToBooking("hyderabad", "Delhi");
+	hp.flightToBooking("hyderabad", "Delhi","June","25");
 }
+
+
 }

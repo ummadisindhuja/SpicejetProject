@@ -1,5 +1,6 @@
 package pagesSpiceJet;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -102,19 +103,19 @@ public class HomePage extends BaseSpiceJet {
 	public HomePage() {
 		PageFactory.initElements(driver, this);
 	}
-	public void flightToBooking(String typefrom, String typeto) {
+	public void flightToBooking(String typefrom, String typeto,String month,String date ) {
 		clickOn(oneWayTripRadioButton);
 		clickOn(from);
 		type(this.fromInput,typefrom);
 		clickOn(to);
 		type(this.toInput,typeto);
-		waitExplicit(departureDate);
-		clickOn(departureDate);
-		clickOn(departureDateSelect);
-		clickOn(passengersDropDown);
-		clickOn(selectAdult);
-		selectFromDropDown(currencyDropDown, "AED");
-		clickOn(searchFlightButton);
+		jsClickOn(departureDate);
+		driver.findElement(By.xpath("//div[@data-testid='undefined-month-"+month+"-2023']//div[text()='"+date+"']")).click();
+		
+//		clickOn(passengersDropDown);
+//		clickOn(selectAdult);
+//		selectFromDropDown(currencyDropDown, "AED");
+		jsClickOn(searchFlightButton);
 		
 	}
 	public boolean  checkInValidatation( ) {
@@ -141,17 +142,17 @@ public class HomePage extends BaseSpiceJet {
 		clickOn(signUpLink);
 	}
 
-	public void oneWaytripwithFamilyFriends(String typefrom, String typeto) {
+	public void oneWaytripwithFamilyFriends(String typefrom, String typeto,String month,String date) {
 		clickOn(oneWayTripRadioButton);
 		clickOn(from);
 		type(this.fromInput,typefrom);
 		clickOn(to);
 		type(this.toInput,typeto);
-		clickOn(departureDate);
-		clickOn(departureDateSelect);
-        selectFromDropDown(passengersDropDown, "Adult");
-		selectFromDropDown(currencyDropDown, "AED");
-		clickOn(familyFriendsRadioButton);
+type(this.toInput,typeto);
+		
+		jsClickOn(departureDate);
+		driver.findElement(By.xpath("//div[@data-testid='undefined-month-"+month+"-2023']//div[text()='"+date+"']")).click();
+		
 		clickOn(searchFlightButton);
 	}
 

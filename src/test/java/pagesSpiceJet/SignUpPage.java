@@ -54,11 +54,11 @@ public class SignUpPage extends BaseSpiceJet{
 	public String signUpFunctionality(String firstName,String lastName,String mobileNumber,
 			String emailId , String newPassword, String confirmPassword,String textXpath) {
 		
-		clickOn(tittleDropDown);
+		selectFromDropDown(tittleDropDown,"Mrs");
 		clickOn(selectIntittleDropDown);
 		type(this.firstName,firstName);
 		type(this.lastName,lastName);
-		selectFromDropDown(countryDropDown,"India ");
+		selectFromDropDown(countryDropDown,"India");
 		clickOn(this.dateOfBirthClick);
 		type(this.mobileNumber,mobileNumber);
 		type(this.emailId,emailId);
@@ -66,7 +66,7 @@ public class SignUpPage extends BaseSpiceJet{
 		type(this.confirmPassword,confirmPassword);
 		clickOn(checkBox);
 		clickOn(submitButton);
-		String actMsg=driver.findElement(By.xpath(""+textXpath+"")).getText();
+		String actMsg=driver.findElement(By.xpath(textXpath)).getText();
 		return actMsg;
 	}
 	

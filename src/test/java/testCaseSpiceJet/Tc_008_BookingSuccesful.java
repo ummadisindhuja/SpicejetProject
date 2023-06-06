@@ -18,11 +18,11 @@ public class Tc_008_BookingSuccesful extends BaseSpiceJet{
 	@Test
 	public void dummyPassengerAndPaymentInfo() {
 		HomePage hp = new HomePage();
-		hp.flightToBooking("Hyderabad", "Delhi");
+		hp.flightToBooking("Hyderabad", "Delhi","june","21");
 		Bookingpage bp= new Bookingpage();
 		bp.fillDetailsforBooking("ummadi", "sindhuja", "8522098804", "ummadimails.ummadisindhuja@gmail.co",
 				"India", "kadapa");
-		bp.paymentInfo("607392011972", "UMMADI SINDHUJA", "04", "26", "035");
+		bp.paymentInfo("607392011872", "UMMADI SINDHUJA", "04", "26", "126");
 		
 }
 }

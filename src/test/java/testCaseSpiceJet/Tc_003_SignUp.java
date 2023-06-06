@@ -10,7 +10,7 @@ import pagesSpiceJet.SignUpPage;
 public class Tc_003_SignUp extends BaseSpiceJet {
 	@BeforeTest
 	public void setup() {
-		testName = "tc_002_validateSignUpFunctionality";
+		testName = "tc_003_validateSignUpFunctionality";
 		testDescription = "SignUp Functionality";
 		testCategory = "Regression";
 		testAuthor = "Sindhuja";

@@ -113,8 +113,8 @@ public class UtilSpiceJet {
 		waitExplicit(element);
 		element.click();
 	}
-	public static void dismissAlert() {
-		driver.switchTo().alert().dismiss();
+	public static void switchingTodefault() {
+		driver.switchTo().defaultContent();
 	}
 
 	public void dob() {

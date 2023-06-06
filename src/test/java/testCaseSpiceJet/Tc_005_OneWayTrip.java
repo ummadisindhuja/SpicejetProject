@@ -18,13 +18,8 @@ public class Tc_005_OneWayTrip extends BaseSpiceJet {
 	@Test(dataProvider="getFromExcel")
 	public void oneWayTrip(String from, String to) {
 		HomePage hp= new HomePage();
-		hp.oneWaytripwithFamilyFriends(from, to);
+		hp.oneWaytripwithFamilyFriends(from, to,"June","25");
 		
-	}
-	@Test(dataProvider="getFromExcel")
-	public void oneWayTrip1(String from, String to) {
-		HomePage hp= new HomePage();
-		hp.oneWaytripwithGovtEmployee(from, to);
 	}
 	
 

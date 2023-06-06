@@ -14,7 +14,7 @@ public class Tc_004_SignIn extends BaseSpiceJet {
 		testDescription = "SignIn Functionality";
 		testCategory = "Regression";
 		testAuthor = "Sindhuja";
-		sheetName="signInwithMobile";
+		sheetName="signInwithNumber";
 	}
 	@Test(dataProvider="getFromExcel")
 	public void signInwithMobile(String number,String password) {
@@ -27,12 +27,5 @@ public class Tc_004_SignIn extends BaseSpiceJet {
 		
 	}
 	
-	@Test(dataProvider="getFromExcel")
-	public void signInWithEmail(String email,String password) {
-		HomePage hp=new HomePage();
-		hp.loginButton();
-		SignInPage sp = new SignInPage();
-		sp.signInWithEmail(email, password);
-	}
 		
 }
