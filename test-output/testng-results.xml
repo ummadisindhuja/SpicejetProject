@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-06-06T10:40:23 IST" name="Default suite" finished-at="2023-06-06T10:41:14 IST" duration-ms="51108">
+    <groups>
+    </groups>
+    <test started-at="2023-06-06T10:40:23 IST" name="Default test" finished-at="2023-06-06T10:41:14 IST" duration-ms="51108">
+      <class name="testCaseSpiceJet.Tc_009_BookingPageValidatations">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:testCaseSpiceJet.Tc_009_BookingPageValidatations@6404f418]" started-at="2023-06-06T10:40:23 IST" name="startReport" finished-at="2023-06-06T10:40:23 IST" duration-ms="273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCaseSpiceJet.Tc_009_BookingPageValidatations@6404f418]" started-at="2023-06-06T10:40:23 IST" name="setup" finished-at="2023-06-06T10:40:23 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="testDetails()[pri:0, instance:testCaseSpiceJet.Tc_009_BookingPageValidatations@6404f418]" started-at="2023-06-06T10:40:23 IST" name="testDetails" finished-at="2023-06-06T10:40:23 IST" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDetails -->
+        <test-method is-config="true" signature="start()[pri:0, instance:testCaseSpiceJet.Tc_009_BookingPageValidatations@6404f418]" started-at="2023-06-06T10:40:23 IST" name="start" finished-at="2023-06-06T10:40:39 IST" duration-ms="15743" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method signature="checkInvalidation()[pri:0, instance:testCaseSpiceJet.Tc_009_BookingPageValidatations@6404f418]" started-at="2023-06-06T10:40:39 IST" name="checkInvalidation" finished-at="2023-06-06T10:40:41 IST" duration-ms="1909" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkInvalidation -->
+        <test-method is-config="true" signature="close()[pri:0, instance:testCaseSpiceJet.Tc_009_BookingPageValidatations@6404f418]" started-at="2023-06-06T10:40:41 IST" name="close" finished-at="2023-06-06T10:40:41 IST" duration-ms="424" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="start()[pri:0, instance:testCaseSpiceJet.Tc_009_BookingPageValidatations@6404f418]" started-at="2023-06-06T10:40:41 IST" name="start" finished-at="2023-06-06T10:40:53 IST" duration-ms="11759" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method signature="flightStatusValidation()[pri:0, instance:testCaseSpiceJet.Tc_009_BookingPageValidatations@6404f418]" started-at="2023-06-06T10:40:53 IST" name="flightStatusValidation" finished-at="2023-06-06T10:40:58 IST" duration-ms="5472" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightStatusValidation -->
+        <test-method is-config="true" signature="close()[pri:0, instance:testCaseSpiceJet.Tc_009_BookingPageValidatations@6404f418]" started-at="2023-06-06T10:40:58 IST" name="close" finished-at="2023-06-06T10:40:59 IST" duration-ms="424" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="start()[pri:0, instance:testCaseSpiceJet.Tc_009_BookingPageValidatations@6404f418]" started-at="2023-06-06T10:40:59 IST" name="start" finished-at="2023-06-06T10:41:09 IST" duration-ms="10544" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method signature="manageBookingValidation()[pri:0, instance:testCaseSpiceJet.Tc_009_BookingPageValidatations@6404f418]" started-at="2023-06-06T10:41:09 IST" name="manageBookingValidation" finished-at="2023-06-06T10:41:14 IST" duration-ms="4280" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- manageBookingValidation -->
+        <test-method is-config="true" signature="close()[pri:0, instance:testCaseSpiceJet.Tc_009_BookingPageValidatations@6404f418]" started-at="2023-06-06T10:41:14 IST" name="close" finished-at="2023-06-06T10:41:14 IST" duration-ms="475" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="endReport()[pri:0, instance:testCaseSpiceJet.Tc_009_BookingPageValidatations@6404f418]" started-at="2023-06-06T10:41:14 IST" name="endReport" finished-at="2023-06-06T10:41:15 IST" duration-ms="427" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- testCaseSpiceJet.Tc_009_BookingPageValidatations -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
