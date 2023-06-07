@@ -13,12 +13,12 @@ public class Tc_005_OneWayTrip extends BaseSpiceJet {
 		testDescription = "Tc_005_TripFunctionality";
 		testCategory = "Regression";
 		testAuthor = "sindhuja";
-		sheetName="oneWayTrip";
+		
 	}
-	@Test(dataProvider="getFromExcel")
-	public void oneWayTrip(String from, String to) {
+	@Test
+	public void oneWayTrip() {
 		HomePage hp= new HomePage();
-		hp.oneWaytripwithFamilyFriends(from, to,"June","25");
+		hp.oneWaytrip("hyderabad", "Delhi");
 		
 	}
 	

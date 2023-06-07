@@ -99,7 +99,9 @@ public class Bookingpage extends BaseSpiceJet {
 	public void fillDetailsforBooking(String firstName,String lastname, 
 			String mobileNumber,String emailAddress,String country,
 			String city) {
-		clickOn(continueToPay);
+		
+		
+		actionsClick(continueToPay);
 		selectFromDropDown(clickDropDown,"Mrs");
 		
 		type(firstNameAndMiddleName,firstName);
@@ -108,9 +110,9 @@ public class Bookingpage extends BaseSpiceJet {
 		type(fillEmailAddress,emailAddress);
 		selectFromDropDown(clickCountryDropDown,country);
 		type(fillTownOrCity,city);
-		clickOn(selectCheckBox);
-		clickOn(clickContinue);
-		clickOn(clickContinueInAddOns);
+		actionsClick(selectCheckBox);
+		actionsClick(clickContinue);
+		actionsClick(clickContinueInAddOns);
 	}
 	
 	public void paymentInfo(String cardNumber, String cardHoldername, String expMonth, 

@@ -12,39 +12,39 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import utilsSpiceJet.UtilSpiceJet;
 
-public class BaseSpiceJet extends UtilSpiceJet{
+public class BaseSpiceJet extends UtilSpiceJet {
 	@BeforeSuite
 	public void startReport() {
-		ExtentHtmlReporter reporter = new ExtentHtmlReporter("./reports/result.html");		
+		ExtentHtmlReporter reporter = new ExtentHtmlReporter("./reports/result.html");
 		reporter.setAppendExisting(false);
 		extent = new ExtentReports();
 		extent.attachReporter(reporter);
 	}
-	
+
 	@BeforeClass
 	public void testDetails() {
 		test = extent.createTest(testName, testDescription);
 		test.assignCategory(testCategory);
 		test.assignAuthor(testAuthor);
 	}
-	
+
 	@BeforeMethod
 	public void start() throws Exception {
 		launchBrowser(readProperty("browser"));
 		getApplication(readProperty("url"));
 	}
-	
+
 	@AfterMethod
 	public void close() {
 		driver.quit();
 	}
-	
+
 	@DataProvider
-	public Object[][] getFromExcel() throws Exception{
+	public Object[][] getFromExcel() throws Exception {
 		Object[][] data = dataReader(sheetName);
 		return data;
 	}
-	
+
 	@AfterSuite
 	public void endReport() {
 		extent.flush();

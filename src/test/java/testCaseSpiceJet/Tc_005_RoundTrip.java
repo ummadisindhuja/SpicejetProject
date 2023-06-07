@@ -13,12 +13,12 @@ public class Tc_005_RoundTrip extends BaseSpiceJet{
 		testDescription = "Tc_005_TripFunctionality";
 		testCategory = "Regression";
 		testAuthor = "sindhuja";
-		sheetName="roundTrip";//sheet naot saving-----------------------------------------
+		
 	}
-	@Test(dataProvider="getFromExcel")
-	public void roundTrip(String from, String to) {
+	@Test
+	public void roundTrip() {
 		HomePage hp= new HomePage();
-		hp.roundTripwithGovtEmployee(from, to);
+		hp.roundTrip("hyderabad", "Delhi");
 		
 	}
 

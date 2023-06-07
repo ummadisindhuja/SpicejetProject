@@ -18,7 +18,7 @@ public class Tc_006_SelectFlightToBooking extends BaseSpiceJet{
 @Test
 public void ticketBooking() {
 	HomePage hp = new HomePage();
-	hp.flightToBooking("hyderabad", "Delhi","June","25");
+	hp.flightToBooking("hyderabad", "Delhi");
 }
 
 

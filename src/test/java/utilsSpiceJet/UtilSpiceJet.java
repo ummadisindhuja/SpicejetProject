@@ -24,6 +24,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -35,7 +36,6 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import pagesSpiceJet.HomePage;
 
 public class UtilSpiceJet {
 	public static WebDriver driver;
@@ -88,6 +88,10 @@ public class UtilSpiceJet {
 	public static void waitExplicit(WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 		wait.until(ExpectedConditions.visibilityOf(element));
+	}
+	public static void actionsClick(WebElement ele) {
+		Actions act = new Actions(driver);
+		act.click(ele).build().perform();
 	}
 
 	public static void waitExplicitUntillTitle(String titleToWait) {
