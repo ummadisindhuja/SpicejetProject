@@ -190,8 +190,19 @@ public class HomePage extends BaseSpiceJet {
 	@FindBy(xpath="//a[@class='btn btn__cancel']")
 	WebElement cancelOTP;
 	
+	@FindBy(xpath="//span[@id='skipfrompopup']")
+	WebElement beforePaymentPopUp;
+	
+	@FindBy(xpath="//div[text()='Convenience Fee']")
+	WebElement bookingPageValidation;
+	
 	public HomePage() {
 		PageFactory.initElements(driver, this);
+	}
+	public boolean bookingSuccesfulvalidation() {
+		clickOn(bookingPageValidation);
+		boolean act = bookingPageValidation.isDisplayed();
+		return act;
 	}
 
 	public void flightToBooking(String typefrom, String typeto) {
@@ -212,13 +223,13 @@ public class HomePage extends BaseSpiceJet {
 		actionsClick(searchFlightButton);
 
 	}
-
+	
 	public boolean checkInValidatation() {
 		clickOn(checkiInOption);
 		boolean act = checkInValidate.isDisplayed();
 		return act;
 	}
-
+	
 	public String flightStatus() {
 		clickOn(flightStatusOption);
 		String actual = flightStatusValidatation.getText();
@@ -322,6 +333,8 @@ public class HomePage extends BaseSpiceJet {
 		actionsClick(selectCheckBox);
 		actionsClick(clickContinue);
 		jsClickOn(clickContinueInAddOns);
+		
+		jsClickOn(beforePaymentPopUp);
 		waitExplicit(iFrameCardNumber);
 		driver.switchTo().frame(iFrameCardNumber);
 		type(fillCardNumber,cardNumber);
